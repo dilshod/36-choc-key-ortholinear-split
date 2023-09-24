@@ -31,6 +31,5 @@
 1. Solder the controller, diods and toggle switch on the top.
 2. Then solder the switches over the diodes and attach the batteries.
 
-![image](./images/image2.jpg =600x)
-![image](./images/image3.jpg =600x)
-
+<img src="./images/image2.jpg" style="width:600px">
+<img src="./images/image3.jpg" style="width:600px">
