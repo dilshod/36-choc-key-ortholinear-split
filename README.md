@@ -3,6 +3,9 @@
 
 3x5 keys + 3 thumb keys, split wireless keyboard.
 
+![image0](https://github.com/dilshod/36-choc-key-ortholinear-split/blob/main/images/image0.jpg)
+![image1](https://github.com/dilshod/36-choc-key-ortholinear-split/blob/main/images/image1.jpg)
+
 ## Parts
 
 | Name                    | Count | Remarks            | Where to buy                                                              |
@@ -16,3 +19,7 @@
 | Choc Keycaps            |       |                    | https://keebd.com/products/mbk-legend-40s-set                             |
 | Rubber Feet             |     4 |                    | https://aliexpress.ru/item/1005005249895853.html                          |
 | 3.7v Lipo battery       |     2 |                    | 601010, 501010, 401010, 400909 - 25mA-55mA                                |
+
+![image](https://github.com/dilshod/36-choc-key-ortholinear-split/blob/main/images/image2.jpg)
+![image](https://github.com/dilshod/36-choc-key-ortholinear-split/blob/main/images/image3.jpg)
+
