@@ -1,12 +1,18 @@
 
 # 36 ortholinear split keyboard
 
-3x5 keys + 3 thumb keys, split wireless keyboard.
+## Keyboard Specifications:
 
-![image0](https://github.com/dilshod/36-choc-key-ortholinear-split/blob/main/images/image0.jpg)
-![image1](https://github.com/dilshod/36-choc-key-ortholinear-split/blob/main/images/image1.jpg)
+* Type: Ortholinear Split Keyboard
+* Key Layout: 3x5 keys + 3 thumb keys
+* Switch Type: Choc v1 switches (Kailh 1350) or kailh x switches
+* Wireless: Yes
+* Controller: Seeeduino XIAO Ble
 
-## Parts
+![image0](./images/image0.jpg)
+![image1](./images/image1.jpg)
+
+## Parts List
 
 | Name                    | Count | Remarks            | Where to buy                                                              |
 | ---                     | ---   | ---                | ---                                                                       |
@@ -18,8 +24,13 @@
 | Screw                   |     8 | M2x5               | https://aliexpress.ru/item/1005003116717551.html?sku_id=12000024187943658 |
 | Choc Keycaps            |       |                    | https://keebd.com/products/mbk-legend-40s-set                             |
 | Rubber Feet             |     4 |                    | https://aliexpress.ru/item/1005005249895853.html                          |
-| 3.7v Lipo battery       |     2 |                    | 601010, 501010, 401010, 400909 - 25mA-55mA                                |
+| 3.7v LiPo battery       |     2 |                    | Various models (601010, 501010, 401010, 400909) - 3.7v, 25mA-55mA         |
 
-![image](https://github.com/dilshod/36-choc-key-ortholinear-split/blob/main/images/image2.jpg)
-![image](https://github.com/dilshod/36-choc-key-ortholinear-split/blob/main/images/image3.jpg)
+## Building Instructions
+
+1. Solder the controller, diods and toggle switch on the top.
+2. Then solder the switches over the diodes and attach the batteries.
+
+![image](./images/image2.jpg =600x)
+![image](./images/image3.jpg =600x)
 

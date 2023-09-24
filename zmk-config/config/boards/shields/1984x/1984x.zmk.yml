@@ -1,0 +1,11 @@
+file_format: "1"
+id: 1984x
+name: 1984x
+type: shield
+url: https://github.com/dilshod/36-choc-key-ortholinear-split
+requires: [seeed_xiao]
+features:
+  - keys
+siblings:
+  - 1984x_left
+  - 1984x_right
