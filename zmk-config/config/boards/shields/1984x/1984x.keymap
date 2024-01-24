@@ -38,14 +38,12 @@
 / {
   macros {
     space_num: space_num {
-      label = "SPACE_NUM";
       compatible = "zmk,behavior-macro"; \
       #binding-cells = <0>; \
       bindings = <&macro_tap &kp SPACE &sl NUM>;
     };
 
     tmux_num: tmux_num {
-      label = "TMUX_NUM";
       compatible = "zmk,behavior-macro"; \
       #binding-cells = <0>; \
       bindings = <&macro_press &kp LCTRL> \
@@ -55,7 +53,6 @@
     };
 
     opt_bspc: opt_bspc {
-      label = "OPT_BSPC";
       compatible = "zmk,behavior-macro"; \
       #binding-cells = <0>; \
       bindings = <&macro_press &kp LALT> \
@@ -75,7 +72,6 @@
   behaviors {
     lgui_gresc: grave_escape {
       compatible = "zmk,behavior-mod-morph";
-      label = "GRAVE_ESCAPE";
       #binding-cells = <0>;
       bindings = <&mt LGUI ESC>, <&kp GRAVE>;
       mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_RALT|MOD_LALT)>;
@@ -84,7 +80,6 @@
 
     bspc_colon: bspc_colon {
       compatible = "zmk,behavior-mod-morph";
-      label = "BSPC_COLON";
       #binding-cells = <0>;
       bindings = <&kp BSPC>, <&kp COLON>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -92,7 +87,6 @@
 
     hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_MODS";
       #binding-cells = <2>;
       tapping_term_ms = <250>;
       quick-tap-ms = <200>;
@@ -103,7 +97,6 @@
 
     hmt: homerow_mods_no_quicktap {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_MODS";
       #binding-cells = <2>;
       tapping_term_ms = <250>;
       quick-tap-ms = <200>;
@@ -113,7 +106,6 @@
 
     ltp: layer_tap_prefered {
       compatible = "zmk,behavior-hold-tap";
-      label = "LAYER_TAP_PREFERED";
       #binding-cells = <2>;
       tapping_term_ms = <200>;
       quick-tap-ms = <150>;
@@ -124,7 +116,6 @@
 
     lhp: layer_hold_prefered {
       compatible = "zmk,behavior-hold-tap";
-      label = "LAYER_HOLD_PREFERED";
       #binding-cells = <2>;
       tapping_term_ms = <150>;
       flavor = "hold-preferred";
@@ -134,28 +125,24 @@
 /*
     mouse_l: mouse_left {
       compatible = "zmk,behavior-mod-morph";
-      label = "MOUSE_LEFT";
       #binding-cells = <0>;
       bindings = <&mmv MOVE_HOR(-5000)>, <&mmv MOVE_HOR(-2000)>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     mouse_r: mouse_right {
       compatible = "zmk,behavior-mod-morph";
-      label = "MOUSE_RIGHT";
       #binding-cells = <0>;
       bindings = <&mmv MOVE_HOR(5000)>, <&mmv MOVE_HOR(2000)>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     mouse_u: mouse_up {
       compatible = "zmk,behavior-mod-morph";
-      label = "MOUSE_UP";
       #binding-cells = <0>;
       bindings = <&mmv MOVE_VERT(-5000)>, <&mmv MOVE_VERT(-2000)>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     mouse_d: mouse_down {
       compatible = "zmk,behavior-mod-morph";
-      label = "MOUSE_DOWN";
       #binding-cells = <0>;
       bindings = <&mmv MOVE_VERT(5000)>, <&mmv MOVE_VERT(2000)>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -188,7 +175,6 @@
     compatible = "zmk,keymap";
 
     default_layer {
-      label = "Base";
       bindings = <
    &kp Q        &kp W        &kp F        &kp P        &kp B                &kp J        &kp L        &kp U        &kp Y        &bspc_colon
    &kp A        &kp R        &kp S        &kp T        &kp G                &kp M        &kp N        &kp E        &kp I        &kp O
@@ -198,7 +184,6 @@
     };
 
     num_layer {
-      label = "Num";
       bindings = <
    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5               &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
    &kp TILDE    &kp AMPS     &kp LPAR     &kp LBRC     &kp LBKT             &kp PLUS     &kp MINUS    &kp SQT      &kp STAR     &kp SEMI
@@ -208,7 +193,6 @@
     };
 
     nav_layer {
-      label = "Nav";
       bindings = <
    &none        &none        &none        &kp C_BRI_DN &kp C_BRI_UP         &kp C_VOL_DN &kp C_VOL_UP &kp C_PP     &kp DEL      &opt_bspc
    &caps_word   &none        &none        &space_num   &none                &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp PG_UP
@@ -218,7 +202,6 @@
     };
 
     app_layer {
-      label = "App";
       bindings = <
    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5               &kp F6       &kp F7       &kp F8       &kp F9       &kp F10
    &kp CAPS     &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK      &none        &none        &none        &none        &none
@@ -237,7 +220,6 @@
     };*/
 
     mouse_layer {
-      label = "Mouse";
       bindings = <
    &none        &none        &none        &none        &none                &none        &none        &none        &none        &none
    &none        &none        &none        &none        &none                &none        &none        &none        &none        &none
@@ -247,7 +229,6 @@
     };
 
     system_layer {
-      label = "System";
       bindings = <
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR           &none        &none        &none        &none        &none
    &ext_power EP_ON &none        &none        &bt BT_SEL 4  &bt BT_SEL 5    &none        &none        &none        &none        &none
@@ -257,7 +238,6 @@
     };
 
     emty_layer {
-      label = "Empty";
       bindings = <
    &none        &none        &none        &none        &none                &none        &none        &none        &none        &none
    &none        &none        &none        &none        &none                &none        &none        &none        &none        &none

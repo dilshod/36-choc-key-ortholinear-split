@@ -27,7 +27,6 @@
 
 #define SPACE_NUM(num) \
   space_num_##num: space_num_##num { \
-    label = str(SPACE_NUM_##num); \
     compatible = "zmk,behavior-macro"; \
     \#binding-cells = <0>; \
     bindings = <&macro_tap &kp SPACE &kp N##num>; \
@@ -35,7 +34,6 @@
 
 #define TMUX_NUM(num) \
   tmux_num_##num: tmux_num_##num { \
-    label = str(TMUX_NUM_##num); \
     compatible = "zmk,behavior-macro"; \
     \#binding-cells = <0>; \
     bindings = <&macro_press &kp LCTRL> \
@@ -67,46 +65,19 @@
     TMUX_NUM(7)
     TMUX_NUM(8)
     TMUX_NUM(9)
-
-    /*space_num: space_num {
-      label = "SPACE_NUM";
-      compatible = "zmk,behavior-macro"; \
-      #binding-cells = <0>; \
-      bindings = <&macro_tap &kp SPACE &sl NUM>;
-    };
-
-    tmux_num: tmux_num {
-      label = "TMUX_NUM";
-      compatible = "zmk,behavior-macro"; \
-      #binding-cells = <0>; \
-      bindings = <&macro_press &kp LCTRL> \
-               , <&macro_tap &kp S> \
-               , <&macro_release &kp LCTRL> \
-               , <&macro_tap &sl NUM>;
-    };
-
-    opt_bspc: opt_bspc {
-      label = "OPT_BSPC";
-      compatible = "zmk,behavior-macro"; \
-      #binding-cells = <0>; \
-      bindings = <&macro_press &kp LALT> \
-               , <&macro_tap &kp BSPC> \
-               , <&macro_release &kp LALT>;
-    };*/
   };
 
   conditional_layers {
     compatible = "zmk,conditional-layers";
     tri_layer {
-        if-layers = <NUM NAV>;
-        then-layer = <APP>;
+      if-layers = <NUM NAV>;
+      then-layer = <APP>;
     };
   };
 
   behaviors {
     lalt_gresc: grave_escape {
       compatible = "zmk,behavior-mod-morph";
-      label = "GRAVE_ESCAPE";
       #binding-cells = <0>;
       bindings = <&mt LALT ESC>, <&kp GRAVE>;
       mods = <(MOD_LGUI)>;
@@ -115,7 +86,6 @@
 
     vol_up: vol_up {
       compatible = "zmk,behavior-mod-morph";
-      label = "VOL_UP";
       #binding-cells = <0>;
       bindings = <&kp C_VOL_UP>, <&kp C_BRI_UP>;
       mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_LALT|MOD_RALT)>;
@@ -123,35 +93,22 @@
 
     vol_dn: vol_dn {
       compatible = "zmk,behavior-mod-morph";
-      label = "VOL_DN";
       #binding-cells = <0>;
       bindings = <&kp C_VOL_DN>, <&kp C_BRI_DN>;
       mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_LALT|MOD_RALT)>;
     };
 
-    space_bspc: space_bspc {
-      compatible = "zmk,behavior-mod-morph";
-      label = "SPACE_BSPC";
-      #binding-cells = <0>;
-      bindings = <&kp SPACE>, <&kp BSPC>;
-      mods = <(MOD_LALT)>;
-      keep-mods = <(MOD_LALT)>;
-    };
-
     hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_MODS";
       #binding-cells = <2>;
       tapping-term-ms = <250>;
       quick-tap-ms = <200>;
-      global-quick-tap;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
 
     sftent: sftent {
       compatible = "zmk,behavior-hold-tap";
-      label = "SFTENT";
       #binding-cells = <2>;
       tapping-term-ms = <150>;
       quick-tap-ms = <75>;
@@ -161,17 +118,16 @@
 
     hmt: homerow_mods_no_quicktap {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_MODS";
       #binding-cells = <2>;
       tapping-term-ms = <200>;
-      quick-tap-ms = <150>;
-      flavor = "balanced";
+      quick-tap-ms = <75>;
+      require-prior-idle-ms = <50>;
+      flavor = "hold-preferred";
       bindings = <&kp>, <&kp>;
     };
 
     lhp: layer_hold_prefered {
       compatible = "zmk,behavior-hold-tap";
-      label = "LAYER_HOLD_PREFERED";
       #binding-cells = <2>;
       tapping-term-ms = <150>;
       flavor = "hold-preferred";
@@ -180,14 +136,13 @@
 
     nav_caps: nav_caps {
       compatible = "zmk,behavior-tap-dance";
-      label = "NAV_CAPS";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&mo NAV>, <&caps_word>, <&kp CAPS>;
     };
   };
 
-  combos {
+  /*combos {
     compatible = "zmk,combos";
 
     #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
@@ -197,79 +152,71 @@
         layers = <LAYERS>; \
       };
 
-    /*
-      ╭─────────────────────╮          ╭─────────────────────╮
-      │   0   1   2   3   4 │          │  5   6   7   8  10  │
-      │  11  12  13  14  15 │          │ 15  16  17  18  19  │
-      │  20  21  22  23  24 ╰───╮  ╭───╯ 25  26  27  28  29  │
-      ╰────────────╮ 30  31  32 │  │ 33  34  35 ╭────────────╯
-                   ╰────────────╯  ╰────────────╯
-    */
+    //  ╭─────────────────────╮          ╭─────────────────────╮
+    //  │   0   1   2   3   4 │          │  5   6   7   8  10  │
+    //  │  11  12  13  14  15 │          │ 15  16  17  18  19  │
+    //  │  20  21  22  23  24 ╰───╮  ╭───╯ 25  26  27  28  29  │
+    //  ╰────────────╮ 30  31  32 │  │ 33  34  35 ╭────────────╯
+    //               ╰────────────╯  ╰────────────╯
 
     // COMBO(caps_word, &caps_word, 30 33, DEFAULT)
-  };
+  };*/
 
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
-      label = "Base";
       bindings = <
-   &kp Q        &kp W        &kp F        &kp P        &kp B                &kp J        &kp L        &kp U        &kp Y        &kp SQT
-   &kp A        &kp R        &kp S        &kp T        &kp G                &kp M        &kp N        &kp E        &kp I        &kp O
-   &hm LCTRL Z  &hm LSFT X   &kp C        &kp D        &kp V                &kp K        &kp H        &kp COMMA    &hm RGUI DOT &hmt RCTRL FSLH
-                             &lalt_gresc  &lhp NUM TAB &mt LGUI BSPC        &kp SPACE    &nav_caps    &sftent RSFT RET
+   &kp Q            &kp W            &kp F            &kp P            &kp B                    &kp J            &kp L            &kp U            &kp Y            &kp SQT
+   &kp A            &kp R            &kp S            &kp T            &kp G                    &kp M            &kp N            &kp E            &kp I            &kp O
+   &hm LCTRL Z      &hm LSFT X       &kp C            &kp D            &kp V                    &kp K            &kp H            &kp COMMA        &hm RGUI DOT     &hmt RCTRL FSLH
+                                     &lalt_gresc      &lhp NUM TAB     &mt LGUI BSPC            &kp SPACE        &nav_caps        &sftent RSFT RET
       >;
     };
 
     num_layer {
-      label = "Num";
       bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5               &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
-   &kp TILDE    &kp AMPS     &kp LPAR     &kp LBRC     &kp LBKT             &kp PLUS     &kp MINUS    &kp SEMI     &kp STAR     &kp EXCL
-   &kp GRAVE    &kp PIPE     &kp RPAR     &kp RBRC     &kp RBKT             &kp EQUAL    &kp UNDER    &kp COLON    &kp DLLR     &kp BSLH
-                             &mo SYSTEM   &trans       &trans               &trans       &trans       &trans
+   &kp N1           &kp N2           &kp N3           &kp N4           &kp N5                   &kp N6           &kp N7           &kp N8           &kp N9           &kp N0
+   &kp TILDE        &kp AMPS         &kp LPAR         &kp LBRC         &kp LBKT                 &kp PLUS         &kp MINUS        &kp SEMI         &kp STAR         &kp EXCL
+   &hm LCTRL GRAVE  &hm LSFT PIPE    &kp RPAR         &kp RBRC         &kp RBKT                 &kp EQUAL        &kp UNDER        &kp COLON        &hm RGUI DLLR    &hmt RCTRL BSLH
+                                     &mo SYSTEM       &trans           &trans                   &trans           &trans           &trans
       >;
     };
 
     nav_layer {
-      label = "Nav";
       bindings = <
-   &none        &none        &none        &none        &none                &vol_dn      &vol_up      &kp C_PP     &none        &kp DEL
-   &none        &none        &none        &none        &none                &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp PG_UP
-   &kp LCTRL    &kp LSFT     &none        &none        &none                &kp HOME     &kp END      &kp K_APP    &kp INS      &kp PG_DN
-                             &kp LALT     &trans       &mt LGUI LA(BSPC)    &trans       &trans       &mo SYSTEM
+   &none            &none            &none            &none            &none                    &vol_dn          &vol_up          &kp C_PP         &none            &kp DEL
+   &none            &none            &none            &none            &none                    &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp PG_UP
+   &kp LCTRL        &kp LSFT         &none            &none            &none                    &kp HOME         &kp END          &kp K_APP        &kp INS          &kp PG_DN
+                                     &kp LALT         &trans           &mt LGUI LA(BSPC)        &trans           &trans           &mo SYSTEM
       >;
     };
 
     app_layer {
-      label = "App";
       bindings = <
-   &space_num_1 &space_num_2  &space_num_3  &space_num_4  &space_num_5      &space_num_6  &space_num_7  &space_num_8  &space_num_9  &space_num_0
-   &tmux_num_1  &tmux_num_2   &tmux_num_3   &tmux_num_4   &tmux_num_5       &tmux_num_6   &tmux_num_7   &tmux_num_8   &tmux_num_9   &tmux_num_0
-   &none        &none        &none        &none        &none                &none        &none        &none        &none        &none
-   //&kp F1       &kp F2       &kp F3       &kp F4       &kp F5               &kp F6       &kp F7       &kp F8       &kp F9       &kp F10
-                             &trans       &none        &none                &none        &none        &none
+   &space_num_1     &space_num_2     &space_num_3     &space_num_4     &space_num_5             &space_num_6     &space_num_7     &space_num_8     &space_num_9     &space_num_0
+   &tmux_num_1      &tmux_num_2      &tmux_num_3      &tmux_num_4      &tmux_num_5              &tmux_num_6      &tmux_num_7      &tmux_num_8      &tmux_num_9      &tmux_num_0
+   &none            &none            &none            &none            &none                    &none            &none            &none            &none            &none
+ //&kp F1           &kp F2           &kp F3           &kp F4           &kp F5                   &kp F6           &kp F7           &kp F8           &kp F9           &kp F10
+                                     &trans           &none            &none                    &none            &none            &none
       >;
     };
 
     system_layer {
-      label = "System";
       bindings = <
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &none        &none        &none        &none        &none
-   &ext_power EP_ON &none        &none        &none        &bt BT_CLR       &none        &none        &none        &none        &none
-   &ext_power EP_OFF &none       &none        &none        &none            &none        &none        &none        &none        &none
-                                 &trans       &none        &none            &none        &none        &none
+   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4             &none            &none            &none            &none            &ext_power EP_ON
+   &bt BT_DISC 0    &bt BT_DISC 1    &bt BT_DISC 2    &bt BT_DISC 3    &bt BT_DISC 4            &none            &none            &none            &none            &ext_power EP_OFF
+   &none            &none            &none            &none            &bt BT_CLR               &none            &none            &none            &none            &none
+                                     &trans           &none            &none                    &none            &none            &none
       >;
     };
 
     emty_layer {
-      label = "Empty";
       bindings = <
-   &none        &none        &none        &none        &none                &none        &none        &none        &none        &none
-   &none        &none        &none        &none        &none                &none        &none        &none        &none        &none
-   &none        &none        &none        &none        &none                &none        &none        &none        &none        &none
-                             &none        &none        &none                &none        &none        &none
+   &none            &none            &none            &none            &none                    &none            &none            &none            &none            &none
+   &none            &none            &none            &none            &none                    &none            &none            &none            &none            &none
+   &none            &none            &none            &none            &none                    &none            &none            &none            &none            &none
+                                     &none            &none            &none                    &none            &none            &none
       >;
     };
 
