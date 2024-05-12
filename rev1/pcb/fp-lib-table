@@ -1,0 +1,11 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "USB4510-03-1-A_REVA")(type "KiCad")(uri "${KIPRJMOD}/../kicad/USB4510-03-1-A_REVA")(options "")(descr ""))
+  (lib (name "MINI-MSK12CO2")(type "KiCad")(uri "${KIPRJMOD}/../kicad/MINI-MSK12CO2")(options "")(descr ""))
+  (lib (name "USB-C-C168688")(type "KiCad")(uri "${KIPRJMOD}/../kicad/USB-C-C168688")(options "")(descr ""))
+  (lib (name "HOLYIOT21069")(type "KiCad")(uri "${KIPRJMOD}/../kicad/HOLYIOT21069")(options "")(descr ""))
+  (lib (name "led_smd_315")(type "KiCad")(uri "${KIPRJMOD}/../kicad/LED_SMD_315/led_smd_315.pretty")(options "")(descr ""))
+  (lib (name "BUTTON_SWITCH_EVPBB4A9B000")(type "KiCad")(uri "${KIPRJMOD}/../kicad/BUTTON_SWITCH_EVPBB4A9B000")(options "")(descr ""))
+  (lib (name "Misc")(type "KiCad")(uri "${KIPRJMOD}/../kicad/MISC/Misc.pretty")(options "")(descr ""))
+  (lib (name "sw_keyboard_switches")(type "KiCad")(uri "${KIPRJMOD}/../kicad/SW_KEYBOARD_SWITCHES/sw_keyboard_switches.pretty")(options "")(descr ""))
+)

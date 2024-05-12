@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Holyiot-21069-nRF5340")(type "KiCad")(uri "${KIPRJMOD}/../kicad/HOLYIOT21069/Holyiot-21069-nRF5340.kicad_sym")(options "")(descr ""))
+  (lib (name "Misc")(type "KiCad")(uri "${KIPRJMOD}/../kicad/MISC/Misc.kicad_sym")(options "")(descr ""))
+)

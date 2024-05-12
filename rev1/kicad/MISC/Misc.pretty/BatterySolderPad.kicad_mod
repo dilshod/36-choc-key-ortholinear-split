@@ -1,0 +1,227 @@
+(footprint "BatterySolderPad"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Wire Pad, Square, SMD Pad,  1mm x 2mm,")
+	(tags "MesurementPoint Square SMDPad 1mmx2mm ")
+	(property "Reference" "H1"
+		(at 0 -2.54 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "129e2d03-9438-45b3-bfb7-e5a6645cd39a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "-"
+		(at 0 -1.7 180)
+		(layer "F.SilkS")
+		(uuid "4b44b8fd-1a23-4b03-ae75-2d2ad39f23b3")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.125)
+			)
+		)
+	)
+	(property "Footprint" "Connector_Wire:SolderWirePad_1x01_SMD_1x2mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "be18583f-deaf-4aec-a34a-5d744b499f65")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "080cd63c-6044-430c-9418-098cf27fe552")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Mounting Hole with connection"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c8f03ee5-496e-4a19-ab50-a5fc08f48d13")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr exclude_from_pos_files)
+	(fp_line
+		(start -0.6 -0.5)
+		(end -0.6 0.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(net 22)
+		(uuid "baa25b03-828d-4376-bd9e-141d91f531b8")
+	)
+	(fp_line
+		(start 0.6 -0.5)
+		(end 0.6 0.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(net 22)
+		(uuid "df461b08-90e3-4b05-a65c-8b967ecbf10e")
+	)
+	(fp_arc
+		(start -0.6 -0.5)
+		(mid 0 -1.1)
+		(end 0.6 -0.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(net 22)
+		(uuid "2a2036fa-030d-4900-a014-d99404641f5b")
+	)
+	(fp_arc
+		(start 0.6 0.5)
+		(mid 0 1.1)
+		(end -0.6 0.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "028ab608-f7b7-4e4c-b47d-b45b938aad28")
+	)
+	(fp_line
+		(start -0.63 -1.27)
+		(end -0.63 1.27)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2903337d-0829-436d-baa9-a5c49dfb6de0")
+	)
+	(fp_line
+		(start -0.63 1.27)
+		(end 0.63 1.27)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bdcce8e7-1686-4126-8abb-97506d716282")
+	)
+	(fp_line
+		(start 0.63 -1.27)
+		(end -0.63 -1.27)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "cdd76da2-8abf-4275-b803-6c9055e4c077")
+	)
+	(fp_line
+		(start 0.63 1.27)
+		(end 0.63 -1.27)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f00a40b0-bc03-48b4-9b30-64f2226a76d9")
+	)
+	(fp_line
+		(start -0.63 -1.27)
+		(end 0.63 -1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c98a6e19-9fce-4593-b185-55438ff7d4e4")
+	)
+	(fp_line
+		(start -0.63 1.27)
+		(end -0.63 -1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f15e4378-4553-4f4d-8587-4a94aba9113f")
+	)
+	(fp_line
+		(start 0.63 -1.27)
+		(end 0.63 1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "311e3ad0-496e-4238-bb28-563d48ebd27d")
+	)
+	(fp_line
+		(start 0.63 1.27)
+		(end -0.63 1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a53fa00a-cdcd-4b33-a93a-42cd325dd959")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "3891d5b6-1115-4fe9-97af-baab091d9843")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 -0.5)
+		(size 0.6 0.6)
+		(drill 0.3)
+		(layers "*.Cu" "F.Mask")
+		(remove_unused_layers no)
+		(uuid "43c89110-5598-4148-9ffe-53400063f802")
+	)
+	(pad "1" smd roundrect
+		(at 0 0)
+		(size 1 2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.5)
+		(uuid "74b4db90-cc10-4906-82d8-44f1ab806578")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0.5)
+		(size 0.6 0.6)
+		(drill 0.3)
+		(layers "*.Cu" "F.Mask")
+		(remove_unused_layers no)
+		(uuid "e11c8db7-7d54-4e05-bc23-a6cec52ffa70")
+	)
+)
