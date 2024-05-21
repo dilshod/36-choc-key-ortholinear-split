@@ -1,0 +1,16 @@
+
+if SHIELD_1984_LEFT
+
+config ZMK_KEYBOARD_NAME
+  default "1984"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+  default y
+
+endif
+
+if SHIELD_1984_LEFT || SHIELD_1984_RIGHT
+config ZMK_SPLIT
+  default y
+
+endif

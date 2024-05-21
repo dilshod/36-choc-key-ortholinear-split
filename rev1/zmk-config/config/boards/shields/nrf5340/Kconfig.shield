@@ -1,0 +1,6 @@
+
+config SHIELD_1984_LEFT
+    def_bool $(shields_list_contains,nrf5340_left)
+
+config SHIELD_1984_RIGHT
+    def_bool $(shields_list_contains,nrf5340_right)

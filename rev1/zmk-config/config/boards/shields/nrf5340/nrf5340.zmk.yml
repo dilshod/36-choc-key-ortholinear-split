@@ -1,0 +1,11 @@
+file_format: "1"
+id: nrf5340
+name: nrf5340
+type: shield
+url: https://github.com/dilshod/1984kbd/
+requires: [nrf5340dk_nrf5340_cpuapp]
+features:
+  - keys
+siblings:
+  - nrf5340_left
+  - nrf5340_right
