@@ -1,0 +1,30 @@
+/ {
+	chosen {
+		zephyr,code-partition = &boot_partition;
+	};
+
+  buttons {
+    button0: button_0 {
+      // left
+   //   gpios = <&gpio1 9 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>;
+      // right
+       gpios = <&gpio0 4 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>;
+      label = "Push button 1";
+      zephyr,code = <INPUT_KEY_0>;
+    };
+  };
+
+  leds {
+    led0: led_0 {
+      // left
+      //gpios = <&gpio0 21 GPIO_ACTIVE_LOW>;
+      // right
+       gpios = <&gpio1 2 GPIO_ACTIVE_LOW>;
+      label = "Green LED 0";
+    };
+  };
+};
+
+&gpio_fwd {
+    status="disabled";
+};
