@@ -3,7 +3,7 @@
 
 ## Keyboard Specifications:
 
-# Controller: holyiot-21069 (nrf5340)
+* Controller: holyiot-21069 (nrf5340)
 
 ![image0](./images/main.jpg)
 
