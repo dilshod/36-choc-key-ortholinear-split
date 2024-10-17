@@ -89,6 +89,7 @@
       #binding-cells = <0>;
       bindings = <&kp C_VOL_UP>, <&kp C_BRI_UP>;
       mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_LALT|MOD_RALT)>;
+      keep-mods = <(MOD_RSFT)>;
     };
 
     vol_dn: vol_dn {
@@ -96,6 +97,7 @@
       #binding-cells = <0>;
       bindings = <&kp C_VOL_DN>, <&kp C_BRI_DN>;
       mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_LALT|MOD_RALT)>;
+      keep-mods = <(MOD_RSFT)>;
     };
 
     hm: homerow_mods {
@@ -191,7 +193,7 @@
 
     nav_layer {
       bindings = <
-   &none            &none            &none            &none            &none                    &vol_dn          &vol_up          &kp C_PP         &none            &kp DEL
+   &none            &none            &none            &kp C_BRI_DN     &kp C_BRI_UP             &kp C_VOL_DN     &kp C_VOL_UP     &kp C_PP         &none            &kp DEL
    &none            &none            &none            &none            &none                    &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp PG_UP
    &kp LCTRL        &kp LSFT         &none            &none            &none                    &kp HOME         &kp END          &kp K_APP        &kp INS          &kp PG_DN
                                      &kp LALT         &trans           &mt LGUI LA(BSPC)        &trans           &trans           &mo SYSTEM
